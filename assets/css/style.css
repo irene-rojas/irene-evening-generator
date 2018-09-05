@@ -1,0 +1,39 @@
+body {
+    margin: 0 auto;
+}
+
+
+.zoom {
+    /* padding-bottom: 50px; */
+    /* background-color: green; */
+    transition: transform .2s;
+    width: 300px;
+    /* height: 300px; */
+    margin: 0 auto;
+    opacity: 0.85;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.05); /* IE 9 */
+    -webkit-transform: scale(1.05); /* Safari 3-8 */
+    transform: scale(1.05); 
+    opacity: 0.85;
+}
+
+#results {
+    /* width: 400px; */
+    margin: 0 auto;
+    margin-top: 15px;
+    background-color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    opacity: 0.85;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+img {
+    width: 300px;
+    margin: 0 auto;
+}

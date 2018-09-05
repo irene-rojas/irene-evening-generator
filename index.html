@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Evening Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- animate css -->
+    <link rel="stylesheet" href="./assets/css/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- our css -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+    <!-- our javascript -->
+</head>
+
+
+<body background="./assets/images/background_spoons1.jpg">
+
+    <!-- header -->
+    <div class="row center animated fadeIn delay-10s" id="header">
+            <h3 class="black-text">Evening Generator</h3>
+            <i class="medium material-icons">local_dining</i>
+            <i class="medium material-icons">movie</i>
+            <h4 >What are you craving tonight?</h4>
+    </div>
+
+    <!-- dropdown section -->
+    <div class="row center animated fadeIn delay-10s" id="selectionDiv">
+        <div class="col m4"></div>
+        <div class="col m4">
+            <select class="browser-default" id="dropDown">
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1" id="italian">Italian</option>
+                <option value="2" id="chinese">Chinese</option>
+                <option value="3" id="french">French</option>
+                <option value="4" id="american">American</option>
+                <option value="5" id="indian">Indian</option>
+                <option value="6" id="japanese">Japanese</option>
+                <option value="7" id="thai">Thai</option>
+            </select>
+            <button class="btn waves-effect black text-white submit" type="submit" name="action" id="submit">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+        <div class="col m4"></div>
+    </div>
+
+    <!-- results area -->
+    <div class="row center">
+            <div class="col m4"></div>
+            <div class="col m4 animated fadeIn delay-10s" id="results">
+                <i class="medium material-icons">local_dining</i>
+                    <div class="zoom" id="foodResult"></div>
+                        <br>
+                        <hr>
+                        <br>
+                <i class="medium material-icons">movie</i>
+                    <div id="movieResult"></div>
+            </div>
+        <div class="col m4"></div>
+    </div>
+
+
+
+
+
+    <!-- javascript -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+    
+</body>
+</html>
