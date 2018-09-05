@@ -9,7 +9,7 @@ $(document).ready(function() {
             url: queryURL,
             method: "GET"
         }).then(function(response) {
-            console.log(response);
+            // console.log(response);
             $("#foodResult").empty();
 
             var resultDiv = $("<div class='foodResult'>");
@@ -40,6 +40,7 @@ $(document).ready(function() {
         });
 
         
+        // WORKING MOVIE CODE
         // var movieArray = ["Jurassic Park", "Inception", "The Muppets", "Inside Out", "Gravity", "Slumdog Millionaire", "The Notebook"];
         // var randomMovie = movieArray[Math.floor(Math.random()*movieArray.length)];
 
@@ -59,26 +60,40 @@ $(document).ready(function() {
         //    $("#movieResult").append(movieDiv);
         // });
 
-        var movieCountry = $("#dropDown option:selected").text();
-        console.log(movieCountry);
-        // var randomMovie = movieCountry[Math.floor(Math.random()*movieCountry.length)];
-        var queryURL = "https://www.omdbapi.com/?apikey=d9666985&t=" + movieCountry;
 
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function(response) {
-            console.log(response);
-           $("#movieResult").empty();
 
-           var movieDiv = $("<div class='movie'>");
+        // EXPERIMENTAL MOVIE CODE
+        var selectedCuisine = [$("#dropDown option:selected").text()];
+        console.log(selectedCuisine);
+        // var cuisineArray = [];
+        // cuisineArray.push(movieCuisine);
+        // console.log(movieCuisine);
+        // var movieArray = movieCuisine.slice(0, 4);
+        // console.log(movieArray);
+        var cuisineMovie = selectedCuisine[Math.floor(Math.random()*selectedCuisine.length)];
+        // cuisineArray.push(selectedMovie);
+        console.log(cuisineMovie);
+        var queryURL = "https://www.omdbapi.com/?apikey=d9666985&s=" + cuisineMovie;
+        console.log(queryURL);
 
-            var imgURL = response.Poster;
-            var image = $("<img>").attr("src", imgURL);
-            movieDiv.prepend(image);
 
-           $("#movieResult").append(movieDiv);
-        });
+
+
+        // $.ajax({
+        //     url: queryURL,
+        //     method: "GET"
+        // }).then(function(response) {
+        //     // console.log(response);
+        //    $("#movieResult").empty();
+
+        //    var movieDiv = $("<div class='movie'>");
+
+        //     var imgURL = response.Poster;
+        //     var image = $("<img>").attr("src", imgURL);
+        //     movieDiv.prepend(image);
+
+        //    $("#movieResult").append(movieDiv);
+        // });
 
 
 
