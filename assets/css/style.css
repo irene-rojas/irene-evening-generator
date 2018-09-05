@@ -7,8 +7,8 @@ body {
     /* padding-bottom: 50px; */
     /* background-color: green; */
     transition: transform .2s;
-    width: 300px;
-    /* height: 300px; */
+    /* width: 300px; */
+    height: 3p0px;
     margin: 0 auto;
     opacity: 0.85;
 }
@@ -23,17 +23,19 @@ body {
 #results {
     /* width: 400px; */
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 10px;
     background-color: white;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     opacity: 0.85;
     border-radius: 5px;
-    margin-bottom: 25px;
+    /* margin-bottom: 15px; */
+    height: 500px;
 }
 
 img {
-    width: 300px;
+    /* width: 300px; */
     margin: 0 auto;
+    height: 300px;
 }

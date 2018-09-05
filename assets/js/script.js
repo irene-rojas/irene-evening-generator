@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#submit").click(function() {
         var selection = $("#dropDown option:selected").text();
         var queryURL = "https://www.themealdb.com/api/json/v1/1/filter.php?a=" + selection;
-        console.log(selection);
+        // console.log(selection);
 
         $.ajax({
             url: queryURL,
@@ -30,7 +30,7 @@ $(document).ready(function() {
                 href : "https://www.themealdb.com/meal.php?c=" + recipeId,
                 text : "Recipe"
             });
-            console.log(recipeLink);
+            // console.log(recipeLink);
 
             resultDiv.prepend(image);
             $(image).wrap("<a href=" + "https://www.themealdb.com/meal.php?c=" + recipeId +" target='_blank'></a>");
@@ -40,13 +40,34 @@ $(document).ready(function() {
         });
 
         
-        var movieArray = ["Jurassic Park", "Inception", "The Muppets", "Inside Out", "Gravity", "Slumdog Millionaire", "The Notebook"];
-        var randomMovie = movieArray[Math.floor(Math.random()*movieArray.length)];
+        // var movieArray = ["Jurassic Park", "Inception", "The Muppets", "Inside Out", "Gravity", "Slumdog Millionaire", "The Notebook"];
+        // var randomMovie = movieArray[Math.floor(Math.random()*movieArray.length)];
+
+        // $.ajax({
+        //     url: "https://www.omdbapi.com/?apikey=d9666985&t=" + randomMovie,
+        //     method: "GET"
+        // }).then(function(response) {
+        //    $("#movieResult").empty();
+
+        //    var movieDiv = $("<div class='movie'>");
+
+        //     var imgURL = response.Poster;
+        //     var image = $("<img>").attr("src", imgURL);
+        //     movieDiv.prepend(image);
+
+
+        //    $("#movieResult").append(movieDiv);
+        // });
+
+        var movieCountry = $("#dropDown option:selected").text();
+        // var randomMovie = response.movieCountry[Math.floor(Math.random()*response.movieCountry.length)];
+        var queryURL = "https://www.omdbapi.com/?apikey=d9666985&t=" + movieCountry;
 
         $.ajax({
-            url: "https://www.omdbapi.com/?apikey=d9666985&t=" + randomMovie,
+            url: queryURL,
             method: "GET"
         }).then(function(response) {
+            console.log(response);
            $("#movieResult").empty();
 
            var movieDiv = $("<div class='movie'>");
@@ -55,12 +76,8 @@ $(document).ready(function() {
             var image = $("<img>").attr("src", imgURL);
             movieDiv.prepend(image);
 
-
            $("#movieResult").append(movieDiv);
         });
-
-
-        
 
 
 

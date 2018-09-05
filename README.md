@@ -28,7 +28,8 @@ https://www.themealdb.com/api.php
 
 Yummly
 https://developer.yummly.com/
-Key: Request Academic Plan
+ID: fcb6acf0
+Key: eda1849bee2b39b96f3b538e07e1cb29
 
 Food2Fork
 https://food2fork.com/about/api
