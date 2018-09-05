@@ -64,40 +64,44 @@ $(document).ready(function() {
 
         // EXPERIMENTAL MOVIE CODE
         var selectedCuisine = [$("#dropDown option:selected").text()];
-        console.log(selectedCuisine);
-        // var cuisineArray = [];
-        // cuisineArray.push(movieCuisine);
-        // console.log(movieCuisine);
-        // var movieArray = movieCuisine.slice(0, 4);
-        // console.log(movieArray);
-        var cuisineMovie = selectedCuisine[Math.floor(Math.random()*selectedCuisine.length)];
-        // cuisineArray.push(selectedMovie);
-        console.log(cuisineMovie);
-        var queryURL = "https://www.omdbapi.com/?apikey=d9666985&s=" + cuisineMovie;
+        var queryURL = "https://www.omdbapi.com/?apikey=d9666985&s=" + selectedCuisine;
         console.log(queryURL);
 
 
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function(response) {
+            console.log(response);
+           $("#movieResult").empty();
+
+           var result = response.Search.slice(0, 5);
+           console.log(result);
+
+           var movieDiv = $("<div class='movie'>");
+
+            var movieSuggestion = result[Math.floor(Math.random()*result.length)];
+            console.log(movieSuggestion);
+            movieDiv.append(movieSuggestion);
+
+            var imgURL = movieSuggestion.Poster;
+            var image = $("<img>").attr("src", imgURL);
+            movieDiv.prepend(image);
+
+            var title = movieSuggestion.Title;
+            var titleText = $("<p>").text(title);
+            movieDiv.append(titleText);
+
+            var plot = movieSuggestion.Plot;
+            var plotText = $("<p>").text(plot);
+            movieDiv.append(plotText);
+
+           $("#movieResult").append(movieDiv);
+        });
 
 
-        // $.ajax({
-        //     url: queryURL,
-        //     method: "GET"
-        // }).then(function(response) {
-        //     // console.log(response);
-        //    $("#movieResult").empty();
 
-        //    var movieDiv = $("<div class='movie'>");
-
-        //     var imgURL = response.Poster;
-        //     var image = $("<img>").attr("src", imgURL);
-        //     movieDiv.prepend(image);
-
-        //    $("#movieResult").append(movieDiv);
-        // });
-
-
-
-    })
+    });
 
 
 
