@@ -60,7 +60,8 @@ $(document).ready(function() {
         // });
 
         var movieCountry = $("#dropDown option:selected").text();
-        // var randomMovie = response.movieCountry[Math.floor(Math.random()*response.movieCountry.length)];
+        console.log(movieCountry);
+        // var randomMovie = movieCountry[Math.floor(Math.random()*movieCountry.length)];
         var queryURL = "https://www.omdbapi.com/?apikey=d9666985&t=" + movieCountry;
 
         $.ajax({
