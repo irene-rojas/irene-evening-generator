@@ -2,13 +2,10 @@ body {
     margin: 0 auto;
 }
 
-
 .zoom {
-    /* padding-bottom: 50px; */
-    /* background-color: green; */
     transition: transform .2s;
     /* width: 300px; */
-    height: 3p0px;
+    height: 300px;
     margin: 0 auto;
     opacity: 0.85;
 }
@@ -35,7 +32,8 @@ body {
 }
 
 img {
-    /* width: 300px; */
+    width: 300px;
     margin: 0 auto;
     height: 300px;
 }
+
