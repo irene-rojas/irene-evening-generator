@@ -1,5 +1,19 @@
 body {
     margin: 0 auto;
+    /* background-image: url("../images/background_spoons1.jpg"); */
+    /* background-image: url("../images/cutting_board_tight.jpg"); */
+    background-image: url("../images/ingredients2.jpg");
+
+    /* width: 100vh; */
+}
+
+#headerDiv {
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+  opacity: 0.85;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .zoom {
@@ -14,7 +28,7 @@ body {
     -ms-transform: scale(1.05); /* IE 9 */
     -webkit-transform: scale(1.05); /* Safari 3-8 */
     transform: scale(1.05); 
-    opacity: 0.85;
+    opacity: 0.95;
 }
 
 #results {
@@ -37,3 +51,4 @@ img {
     height: 300px;
 }
 
+/* <a href='https://www.freepik.com/free-photo/healthy-food-composition-with-colorful-salad_3412156.htm'>Designed by Freepik</a> */
